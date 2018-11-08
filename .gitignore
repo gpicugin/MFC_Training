@@ -50,3 +50,5 @@
 *.ipch
 
 *.ilk
+
+*.opensdf
