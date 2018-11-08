@@ -1,5 +1,4 @@
 #include <afxwin.h>
-using namespace std;
  	// Класс основного окна приложения
  	class CMainWin: public CFrameWnd {
  	public:
