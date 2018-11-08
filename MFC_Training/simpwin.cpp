@@ -8,9 +8,7 @@ CApp App;
 // Реализация
  
 BOOL CApp::InitInstance()
-{
-	//AfxSetAmbientActCtx(FALSE);
-	//CWinApp::InitInstance();
+{	
 // Создание главного окна приложения и его
 // отображение.
  
