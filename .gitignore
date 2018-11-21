@@ -52,3 +52,5 @@
 *.ilk
 
 *.opensdf
+
+*.cache

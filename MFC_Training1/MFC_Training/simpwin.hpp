@@ -3,7 +3,7 @@
  	class CMainWin: public CFrameWnd {
  	public:
  	CMainWin();
- 	// ƒекларирование карты сообщений
+ 	// декларирование карты сообщений
  	DECLARE_MESSAGE_MAP()
  	};
 
