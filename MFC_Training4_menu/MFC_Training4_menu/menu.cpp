@@ -1,4 +1,4 @@
-#include "menu.h"
+п»ї#include "menu.h"
 #include "resource.h"
 #include <string>
 #include <stdio.h>
@@ -40,7 +40,7 @@ afx_msg void CMainWin::OnPaint()
 
 afx_msg void CMainWin::OnCommand_Alpha()
 {
-	// Использование окна сообщений
+	// РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РѕРєРЅР° СЃРѕРѕР±С‰РµРЅРёР№
 	this->MessageBox("OnCommand_Alpha() handler called.", "WM_COMMAND message", 
 		MB_OK | MB_ICONINFORMATION);
 }

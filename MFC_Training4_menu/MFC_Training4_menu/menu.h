@@ -1,23 +1,23 @@
-#include <afxwin.h>
+п»ї#include <afxwin.h>
 class CMainWin: public CFrameWnd {
- 	public:
- 	CMainWin();
- 	afx_msg void OnPaint();
- 	// Обработчики команд меню и акселераторов
- 	afx_msg void OnCommand_Alpha();
- 	afx_msg void OnCommand_Beta();
- 	afx_msg void OnCommand_Gamma();
- 	afx_msg void OnCommand_Epsilon();
- 	afx_msg void OnCommand_Zeta();
- 	afx_msg void OnCommand_Eta();
- 	afx_msg void OnCommand_Theta();
- 	afx_msg void OnCommand_Help();
- 	afx_msg void OnCommand_Time(); //Только акселератор
- 	DECLARE_MESSAGE_MAP()
- 	};
+public:
+	CMainWin();
+	afx_msg void OnPaint();
+	// РћР±СЂР°Р±РѕС‚С‡РёРєРё РєРѕРјР°РЅРґ РјРµРЅСЋ Рё Р°РєСЃРµР»РµСЂР°С‚РѕСЂРѕРІ
+	afx_msg void OnCommand_Alpha();
+	afx_msg void OnCommand_Beta();
+	afx_msg void OnCommand_Gamma();
+	afx_msg void OnCommand_Epsilon();
+	afx_msg void OnCommand_Zeta();
+	afx_msg void OnCommand_Eta();
+	afx_msg void OnCommand_Theta();
+	afx_msg void OnCommand_Help();
+	afx_msg void OnCommand_Time(); //РўРѕР»СЊРєРѕ Р°РєСЃРµР»РµСЂР°С‚РѕСЂ
+	DECLARE_MESSAGE_MAP()
+};
 
-	// Класс приложения
-	class CApp: public CWinApp {
-   	public:
- 	BOOL InitInstance();
- 	};
+// РљР»Р°СЃСЃ РїСЂРёР»РѕР¶РµРЅРёСЏ
+class CApp: public CWinApp {
+public:
+	BOOL InitInstance();
+};
