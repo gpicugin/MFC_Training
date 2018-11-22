@@ -28,7 +28,7 @@ BEGIN_MESSAGE_MAP(CMainWin, CFrameWnd)
  	ON_COMMAND(ID_DELTA_ZETA, OnCommand_Zeta)
  	ON_COMMAND(ID_TWO_ETA, OnCommand_Eta)
  	ON_COMMAND(ID_TWO_THETA, OnCommand_Theta)
- 	//ON_COMMAND(ID_HELP4009, OnCommand_Help)
+ 	ON_COMMAND(ID_HELP, OnCommand_Help)
 END_MESSAGE_MAP()
 
 afx_msg void CMainWin::OnPaint()
