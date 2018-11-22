@@ -39,6 +39,7 @@ BEGIN_MESSAGE_MAP(CMainWin, CFrameWnd)
 	ON_WM_DESTROY()
 	ON_WM_TIMER()
 END_MESSAGE_MAP()
+
 afx_msg void CMainWin::OnPaint()
 {
 	CPaintDC dc(this);
@@ -56,7 +57,7 @@ afx_msg void CMainWin::OnTimer(UINT ID)
 	tm *newtime;
 	tm osTime;
 	newtime = curtime.GetLocalTm(&osTime);
-	sprintf(str, asctime(newtime));
+	sprintf(str, asctime(newtime)); // вывод в буфер(первый аргумент)
 	str[strlen(str) - 1] = '\0';
 
 	// Посылаем сообщение WM_PAINT -- его обработчик
