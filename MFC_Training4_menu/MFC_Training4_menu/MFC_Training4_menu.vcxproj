@@ -66,10 +66,10 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MFC_Training4_menu.rc" />
+    <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="menu.cpp" />
+    <ResourceCompile Include="MFC_Training4_menu.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
