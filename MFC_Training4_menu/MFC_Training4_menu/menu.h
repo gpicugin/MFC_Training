@@ -21,3 +21,4 @@ class CApp: public CWinApp {
 public:
 	BOOL InitInstance();
 };
+

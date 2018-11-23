@@ -1,5 +1,5 @@
-﻿#include "menu.h"
-#include "resource.h"
+﻿#include "resource.h"
+#include "menu.h"
 #include <string>
 #include <stdio.h>
 
@@ -9,6 +9,7 @@ CMainWin::CMainWin()
  	rect.left = 20; rect.top = 10;
  	rect.right = 600; rect.bottom = 460;
  	this->Create(0, "Menus", WS_OVERLAPPEDWINDOW, rect, 0, MAKEINTRESOURCE(IDR_MENU1));
+	this->LoadAccelTable(MAKEINTRESOURCE(IDR_ACCELERATOR1));
 }
 
 BOOL CApp::InitInstance()
@@ -29,6 +30,7 @@ BEGIN_MESSAGE_MAP(CMainWin, CFrameWnd)
  	ON_COMMAND(ID_TWO_ETA, OnCommand_Eta)
  	ON_COMMAND(ID_TWO_THETA, OnCommand_Theta)
  	ON_COMMAND(ID_HELP, OnCommand_Help)
+	ON_COMMAND(ID_TIME, OnCommand_Time)
 END_MESSAGE_MAP()
 
 afx_msg void CMainWin::OnPaint()
@@ -86,6 +88,17 @@ afx_msg void CMainWin::OnCommand_Help()
 {
 	this->MessageBox("OnCommand_Help() handler called.", "WM_COMMAND message", 
 		MB_OK | MB_ICONINFORMATION);
+}
+
+afx_msg void CMainWin::OnCommand_Time()
+{
+	// Получаем текущее время, используя класс MFC CTime
+	CTime currentTime = CTime::GetCurrentTime();
+	CString s = currentTime.Format("%A %B %#d, %Y, %#I:%M%p");
+
+	s = "OnCommand_Time() handler called.\n\n" 
+		+ ("Current date and time:\n" + s);
+	this->MessageBox(s, "WM_COMMAND message");
 }
 
 CApp App;
