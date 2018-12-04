@@ -9,10 +9,10 @@ CMainWin::CMainWin(CString Title, int HowShow)
 	RECT rect;
 	rect.top = 10; rect.left = 50;
 	rect.bottom = 460, rect.right = 630;
-	this->Create(0, Title, WS_OVERLAPPEDWINDOW, rect, 0, MAKEINTRESOURCE(IDR_MENU1));
+	this->Create(0, Title, WS_OVERLAPPEDWINDOW, rect, 0, MAKEINTRESOURCE(IDR_MENU1));	
 	this->ShowWindow(HowShow);
 	this->UpdateWindow();
-	this->LoadAccelTable(MAKEINTRESOURCE(IDR_MENU1));
+	//this->LoadAccelTable(MAKEINTRESOURCE(IDR_MENU1));
 }
 afx_msg void CMainWin::OnCommand_Dialog()
 {
