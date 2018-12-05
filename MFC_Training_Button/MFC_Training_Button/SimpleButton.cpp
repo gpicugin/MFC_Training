@@ -1,4 +1,4 @@
-// SimpleButton.cpp : implementation file
+п»ї// SimpleButton.cpp : implementation file
 //
 
 #include "stdafx.h"
@@ -28,8 +28,8 @@ afx_msg void CSimpleButton::OnLButtonUp(UINT nFlags, CPoint point)
 
 
 BEGIN_MESSAGE_MAP(CSimpleButton, CButton)
-	ON_WM_LBUTTONDOWN() // сообщение о нажатии ЛКМ
-	ON_WM_RBUTTONDOWN() // сообщение о нажатии ПКМ
+	ON_WM_LBUTTONDOWN() // СЃРѕРѕР±С‰РµРЅРёРµ Рѕ РЅР°Р¶Р°С‚РёРё Р›РљРњ
+	ON_WM_RBUTTONDOWN() // СЃРѕРѕР±С‰РµРЅРёРµ Рѕ РЅР°Р¶Р°С‚РёРё РџРљРњ
 END_MESSAGE_MAP()
 
 

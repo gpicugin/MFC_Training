@@ -1,7 +1,6 @@
 ﻿#include <afxwin.h>
 #include <string>
 #include "resource.h"
-#include "SimpleButton.h"
 
 #define IDC_MYBUTTON 100	// Идентификатор кнопки
 #define IDC_MYEDIT 102	// Идентификатор поля редактирования
@@ -9,8 +8,9 @@
 class CMyButton: public CButton
 {
 public:
-	afx_msg void OnLButtonDblClk(UINT, CPoint);
-	afx_msg void OnRButtonDblClk(UINT, CPoint);
+	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnRButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnContextMenu(CWnd* pWnd, CPoint point);
 private:
 	DECLARE_MESSAGE_MAP(); // таблица откликов кнопки
 };
@@ -20,8 +20,8 @@ class CMainWnd : public CFrameWnd
 {
 public:
 	CMainWnd();
-	afx_msg void OnLButtonDblClk(UINT, CPoint);
-	afx_msg void OnRButtonDblClk(UINT, CPoint);
+	afx_msg void OnLButtonUp(UINT, CPoint);
+	afx_msg void OnRButtonUp(UINT, CPoint);
 	afx_msg void OnKeyDown(UINT, UINT, UINT);
 	afx_msg void OnDestroy();
 private:

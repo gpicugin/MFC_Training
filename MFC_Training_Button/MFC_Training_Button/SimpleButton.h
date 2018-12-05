@@ -1,4 +1,4 @@
-#include <afxwin.h>
+﻿#include <afxwin.h>
 #include "resource.h"
 // SimpleButton
 

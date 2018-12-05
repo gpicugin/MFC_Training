@@ -1,4 +1,4 @@
-#include "Button.h"
+п»ї#include "Button.h"
 
 CApp App;
 
@@ -20,7 +20,7 @@ void CMyButton::OnRButtonDblClk(UINT, CPoint)
 	MoveWindow(CRect(120,10,220,50),TRUE);
 }
 
-BEGIN_MESSAGE_MAP(CMyButton, CButton) // таблица откликов на сообщения
+BEGIN_MESSAGE_MAP(CMyButton, CButton) // С‚Р°Р±Р»РёС†Р° РѕС‚РєР»РёРєРѕРІ РЅР° СЃРѕРѕР±С‰РµРЅРёСЏ
 	ON_WM_LBUTTONDBLCLK()
 	ON_WM_RBUTTONDBLCLK()
 END_MESSAGE_MAP()
@@ -28,13 +28,13 @@ END_MESSAGE_MAP()
 CMainWnd::CMainWnd()
 {
 	Create(NULL,"Step4",WS_OVERLAPPEDWINDOW,rectDefault,
-		NULL,NULL);     // Создать окно программы
-	// оператор new по умолчанию в случае ошибки вернет NULL
-	// проверка указателя на NULL дает возможность избавиться от дальнейших ошибок
+		NULL,NULL);     // РЎРѕР·РґР°С‚СЊ РѕРєРЅРѕ РїСЂРѕРіСЂР°РјРјС‹
+	// РѕРїРµСЂР°С‚РѕСЂ new РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РІ СЃР»СѓС‡Р°Рµ РѕС€РёР±РєРё РІРµСЂРЅРµС‚ NULL
+	// РїСЂРѕРІРµСЂРєР° СѓРєР°Р·Р°С‚РµР»СЏ РЅР° NULL РґР°РµС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РёР·Р±Р°РІРёС‚СЊСЃСЏ РѕС‚ РґР°Р»СЊРЅРµР№С€РёС… РѕС€РёР±РѕРє
 	MyStatic = new CStatic();
 	if (MyStatic!=NULL)  MyStatic->Create("MyStatic",WS_CHILD|WS_VISIBLE|SS_CENTER,
-		CRect(10,10,100,50),this);      // создали 
-	MyButton = new CMyButton();  // Меняем класс, на основе которого создается объект
+		CRect(10,10,100,50),this);      // СЃРѕР·РґР°Р»Рё 
+	MyButton = new CMyButton();  // РњРµРЅСЏРµРј РєР»Р°СЃСЃ, РЅР° РѕСЃРЅРѕРІРµ РєРѕС‚РѕСЂРѕРіРѕ СЃРѕР·РґР°РµС‚СЃСЏ РѕР±СЉРµРєС‚
 	if (MyButton!=NULL) MyButton->Create("MyButton",WS_CHILD|WS_VISIBLE|SS_CENTER,
 		CRect(120,10,220,50),this,IDC_MYBUTTON);
 	MyEdit = new CEdit();
@@ -58,14 +58,14 @@ void CMainWnd::OnLButtonDblClk(UINT, CPoint)
 afx_msg void CMainWnd::OnDestroy()
 {
 	
-	this->MessageBox("Завершение приложения.", "SimpleButton", MB_ICONEXCLAMATION);
+	this->MessageBox("Р—Р°РІРµСЂС€РµРЅРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ.", "SimpleButton", MB_ICONEXCLAMATION);
 }
 
 BEGIN_MESSAGE_MAP(CMainWnd, CFrameWnd)	
 	//ON_WM_PAINT()
 	ON_WM_DESTROY()	
-	ON_WM_LBUTTONDOWN() // сообщение о нажатии ЛКМ
-	ON_WM_RBUTTONDOWN() // сообщение о нажатии ПКМ
+	ON_WM_LBUTTONDOWN() // СЃРѕРѕР±С‰РµРЅРёРµ Рѕ РЅР°Р¶Р°С‚РёРё Р›РљРњ
+	ON_WM_RBUTTONDOWN() // СЃРѕРѕР±С‰РµРЅРёРµ Рѕ РЅР°Р¶Р°С‚РёРё РџРљРњ
 	ON_WM_KEYDOWN()
 	ON_WM_RBUTTONDBLCLK()
 	ON_WM_LBUTTONDBLCLK()
