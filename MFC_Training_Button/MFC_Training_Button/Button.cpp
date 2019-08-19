@@ -35,11 +35,13 @@ CMainWnd::CMainWnd()
 	if (MyStatic!=NULL)  MyStatic->Create("MyStatic",WS_CHILD|WS_VISIBLE|SS_CENTER,
 		CRect(10,10,100,50),this);      // создали 
 	MyButton = new CMyButton();  // Меняем класс, на основе которого создается объект
+	
 	if (MyButton!=NULL) MyButton->Create("MyButton",WS_CHILD|WS_VISIBLE|SS_CENTER,
 		CRect(120,10,220,50),this,IDC_MYBUTTON);
 	MyEdit = new CEdit();
 	if (MyEdit!=NULL) MyEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER,
 		CRect(240,10,340,50),this,IDC_MYEDIT);
+	MyButton->EnableWindow(FALSE); // неактивная кнопка
 }
 
 void CMainWnd::OnKeyDown(UINT, UINT, UINT)
