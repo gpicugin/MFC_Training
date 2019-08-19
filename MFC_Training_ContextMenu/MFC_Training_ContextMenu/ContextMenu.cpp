@@ -20,7 +20,7 @@ void CMyButton::OnRButtonUp(UINT nFlags, CPoint point)
 {
 	// TODO: Add your message handler code here and/or call default
 	MoveWindow(CRect(120,10,220,50),TRUE);
-	//CButton::OnRButtonUp(nFlags, point);
+	CButton::OnRButtonUp(nFlags, point);
 }
 
 void CMyButton::OnContextMenu(CWnd* pWnd, CPoint point)
@@ -38,12 +38,24 @@ void CMyButton::OnContextMenu(CWnd* pWnd, CPoint point)
 
 	SetForegroundWindow(); // использует поле класса в котором вызывается
 	// Приводит поток, который создал указанное окно на передний план и активирует окно.
+	CString s = _T(""); 
+	CString i;
+		//for (int iPos = 0; iPos < PopupMenu->GetMenuItemCount(); iPos++)
+		//{
+		//	CString str;			
+		//	if (PopupMenu->GetMenuString(iPos, str, MF_BYPOSITION) && str.Compare(_T("2"))==0)
+		//		PopupMenu->EnableMenuItem(iPos,MF_BYPOSITION | MF_GRAYED); // pich find
+
+		//	i.Format("%i", iPos);
+		//	s = s + str + _T(" - ") + i + _T("\n");			
+		//}		
+	PopupMenu->EnableMenuItem(0, MF_BYPOSITION | MF_GRAYED); // pich find
 
 	DWORD dwCmdId = TrackPopupMenuEx( PopupMenu->GetSafeHmenu(), TPM_LEFTALIGN | TPM_TOPALIGN |
 		TPM_RETURNCMD, menuOrigin.x, menuOrigin.y, m_hWnd, NULL );
 	// Функция TrackPopupMenuEx показывает на экране контекстное меню в заданном расположении
 	// и отслеживает выбор пунктов на контекстном меню.
-
+	
 	PostMessage(WM_NULL, 0, 0);
 	// Помещает сообщение в очередь сообщений окна и затем возвращается без того чтобы ждать
 	// соответствующее окно которое обрабатывает сообщение.
