@@ -41,7 +41,7 @@ CMainWnd::CMainWnd()
 	MyEdit = new CEdit();
 	if (MyEdit!=NULL) MyEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER,
 		CRect(240,10,340,50),this,IDC_MYEDIT);
-	MyButton->EnableWindow(FALSE); // неактивная кнопка
+	//MyButton->EnableWindow(FALSE); // неактивная кнопка
 }
 
 void CMainWnd::OnKeyDown(UINT, UINT, UINT)
