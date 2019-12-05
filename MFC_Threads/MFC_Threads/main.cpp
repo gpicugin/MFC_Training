@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 //#define _AFXDLL //<<===notice this
 //
 //#include <afxwin.h>
@@ -70,4 +71,61 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	return nRetCode;
 
+=======
+#define _AFXDLL //<<===notice this
+#define _DLL
+
+#include <Afxwin.h>
+#include <winsock2.h>
+#include <winsock.h>
+#include <windows.h>
+#include <conio.h>
+
+
+
+#include <iostream>
+//other C++ standard headers here as required
+using namespace std;
+
+// The one and only application object
+CWinApp theApp;
+
+bool bThreadstop;  //контрольная переменная
+
+UINT ThreadProc(LPVOID pParam) // потоковая функция
+{
+	::MessageBox((HWND)pParam, "Thread activated","Message from Thread", MB_OK);
+	while(!bThreadstop)
+    {
+         //Выполнение опреаций
+    }
+	::MessageBox((HWND)pParam, "Thread ended", "Message from thread", MB_OK);
+    return 0;
+}
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+
+
+    // initialize MFC
+    if (!AfxWinInit(::GetModuleHandle(NULL), NULL, ::GetCommandLine(), 0))
+    {
+        // TODO: change error code to suit your needs
+        _tprintf(_T("Fatal Error: MFC initialization failed\n"));
+        return 1;
+    }
+
+    int nRetCode = 0;  
+    cout << "Press ESCAPE to terminate program\r\n";
+
+
+    AfxBeginThread(ThreadProc,0);
+
+    while(getch()!=27);
+
+    return nRetCode;
+
+>>>>>>> Stashed changes
 }
